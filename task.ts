@@ -101,3 +101,19 @@ const findFirstOccurrence = <T>(arr: T[], target: T): number => {
     return -1;
   }
 };
+
+// problem 8
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+const calculateCost = (productArr: Product[]): number => {
+  const total: number = productArr.reduce(
+    (prev, curr) => prev + curr.price * curr.quantity,
+    0
+  );
+  return total;
+};
