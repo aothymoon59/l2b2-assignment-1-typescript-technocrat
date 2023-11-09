@@ -76,3 +76,14 @@ const combinedObjects = (car: Car, driver: Driver): CombinedType => {
   };
   return newArr;
 };
+
+// problem 6
+
+const checkArrOfNumbers = (arr: unknown): void => {
+  if (Array.isArray(arr) && arr.every((item) => typeof item === "number")) {
+    const sum = arr.reduce((prev, curr) => prev + curr, 0);
+    console.log("Sub of the numbers: ", sum);
+  } else {
+    console.log("Invalid input: Parameter is not an array of numbers");
+  }
+};
