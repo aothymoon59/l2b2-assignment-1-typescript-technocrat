@@ -23,3 +23,17 @@ interface Person {
 const getAddressCity = (person: Person): string | undefined => {
   return person?.address?.city;
 };
+
+// problem 3
+
+class Cat {}
+
+const cat = new Cat();
+
+const isCat = (cat: Cat): string => {
+  if (cat instanceof Cat) {
+    return "yes, it's a cat.";
+  } else {
+    return "no, it's not a cat.";
+  }
+};
