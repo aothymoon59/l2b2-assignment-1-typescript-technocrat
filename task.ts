@@ -53,3 +53,26 @@ const calculateNum = (array: MixedData[]): number => {
   });
   return total;
 };
+
+// problem 5
+
+interface Car {
+  make: string;
+  model: string;
+  year: number;
+}
+
+interface Driver {
+  name: string;
+  licenseNumber: number;
+}
+
+type CombinedType = Car & Driver;
+
+const combinedObjects = (car: Car, driver: Driver): CombinedType => {
+  const newArr = {
+    ...car,
+    ...driver,
+  };
+  return newArr;
+};
