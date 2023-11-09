@@ -16,6 +16,21 @@ person?.address?.city ?? "No Address Found";
 
 If address value is undefined we get a error, but when we are using optional chaining we are safe from error.If here first value is null or undefined then we can see "No Address Found" by nullish operator.
 
-### How do you handle asynchronous operations in TypeScript, and what are the advantages of using async/await over callbacks or Promises?.
+### 3. How do you handle asynchronous operations in TypeScript, and what are the advantages of using async/await over callbacks or Promises?.
 
 - By using async/await we can handle asynchronous operations in TypeScript. If we use async await, when we get a promise then code will be execute line by line and we can handle asynchronous operations.
+
+### 4. How can you use TypeScript's enums, and what are their advantages?.
+
+- TypeScript's enums are a way to define a set of named constants. Enums make the code more readable and understandable.Enums in TypeScript are type-safe.
+
+### 5. Explain the role of type guards in TypeScript and provide an example of a custom type guard.
+
+- By using type guard we can check code type and narrow down the type of a variable based on its value.
+  Here is example of type guard:
+
+```
+if (typeof item === "number") {
+      total += item as number;
+    }
+```
