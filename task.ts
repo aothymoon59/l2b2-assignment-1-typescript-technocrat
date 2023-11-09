@@ -20,8 +20,8 @@ interface Person {
   phone?: string;
 }
 
-const getAddressCity = (person: Person): string | undefined => {
-  return person?.address?.city;
+const getAddressCity = (person: Person): string => {
+  return person?.address?.city ?? "No Address Found";
 };
 
 // problem 3
@@ -91,15 +91,7 @@ const checkArrOfNumbers = (arr: unknown): void => {
 // problem 7
 
 const findFirstOccurrence = <T>(arr: T[], target: T): number => {
-  if (
-    Array.isArray(arr) &&
-    (arr.every((item) => typeof item === "number") ||
-      arr.every((item) => typeof item === "string"))
-  ) {
-    return arr.indexOf(target);
-  } else {
-    return -1;
-  }
+  return arr.indexOf(target);
 };
 
 // problem 8
