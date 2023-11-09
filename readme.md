@@ -8,7 +8,7 @@
 
 - By using optional chaining (?.) we can handle undefined value without error. And by using nullish coalescing (??) operator we can conditionally set a value.
 
-here is example of optional chaining and nullish coalescing operator:
+here is an example of optional chaining and nullish coalescing operator:
 
 ```
 person?.address?.city ?? "No Address Found";
@@ -27,10 +27,33 @@ If address value is undefined we get a error, but when we are using optional cha
 ### 5. Explain the role of type guards in TypeScript and provide an example of a custom type guard.
 
 - By using type guard we can check code type and narrow down the type of a variable based on its value.
-  Here is example of type guard:
+  Here is an example of type guard:
 
 ```
 if (typeof item === "number") {
       total += item as number;
     }
+```
+
+### 6. Can you give an example of how to use "readonly" properties in TypeScript?
+
+- By using readonly we can only read but we can not modify. Here is an example:
+
+```
+class BankAccount {
+    public readonly id: number;
+
+    constructor(id: number, name: string, balance: number) {
+      this.id = id;
+    }
+  }
+```
+
+### 7. Explain what a union type is in TypeScript and provide an example of its usage.
+
+- In TypeScript, a union type allows us to declare a type that can represent values of different types. It is denoted using the pipe (|) symbol between the types. This means that a variable with a union type can hold values of any of the specified types.
+  Here is an example:
+
+```
+type Alphanumeric = string | number;
 ```
