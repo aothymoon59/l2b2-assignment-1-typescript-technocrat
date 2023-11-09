@@ -15,3 +15,7 @@ person?.address?.city ?? "No Address Found";
 ```
 
 If address value is undefined we get a error, but when we are using optional chaining we are safe from error.If here first value is null or undefined then we can see "No Address Found" by nullish operator.
+
+### How do you handle asynchronous operations in TypeScript, and what are the advantages of using async/await over callbacks or Promises?.
+
+- By using async/await we can handle asynchronous operations in TypeScript. If we use async await, when we get a promise then code will be execute line by line and we can handle asynchronous operations.
