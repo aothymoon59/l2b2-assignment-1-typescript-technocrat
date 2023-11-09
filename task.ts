@@ -87,3 +87,17 @@ const checkArrOfNumbers = (arr: unknown): void => {
     console.log("Invalid input: Parameter is not an array of numbers");
   }
 };
+
+// problem 7
+
+const findFirstOccurrence = <T>(arr: T[], target: T): number => {
+  if (
+    Array.isArray(arr) &&
+    (arr.every((item) => typeof item === "number") ||
+      arr.every((item) => typeof item === "string"))
+  ) {
+    return arr.indexOf(target);
+  } else {
+    return -1;
+  }
+};
