@@ -37,3 +37,19 @@ const isCat = (cat: Cat): string => {
     return "no, it's not a cat.";
   }
 };
+
+// problem 4
+
+type MixedData = number | string;
+
+const mixedData: MixedData[] = [1, "two", 3, "four", 5];
+
+const calculateNum = (array: MixedData[]): number => {
+  let total: number = 0;
+  array.forEach((item) => {
+    if (typeof item === "number") {
+      total += item as number;
+    }
+  });
+  return total;
+};
