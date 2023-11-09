@@ -9,3 +9,17 @@ const makeSquareOrLength = (param: Alphanumeric): number => {
     return param * param;
   }
 };
+
+// problem 2
+
+interface Person {
+  address?: {
+    city: string;
+    street: string;
+  };
+  phone?: string;
+}
+
+const getAddressCity = (person: Person): string | undefined => {
+  return person?.address?.city;
+};
